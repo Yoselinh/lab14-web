@@ -1,4 +1,5 @@
 const BASE_URL = "https://mi-proyecto-seo-wzfl.onrender.com";
+const urls = ["/", "/blog", "/contacto"];
 
 export default async function handler(req, res) {
   const urls = ["/", "/blog", "/contacto"]; // Agrega más rutas dinámicamente
