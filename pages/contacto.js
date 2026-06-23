@@ -17,7 +17,7 @@ export default function Contacto() {
         <meta name="keywords" content="contacto, soporte, información, Next.js" />
         <meta property="og:title" content="Contacto - Mi Sitio Optimizado" />
         <meta property="og:description" content="¿Tienes preguntas? Escríbenos y te responderemos pronto." />
-        <meta property="og:image" content="/images/seo-image.png" />
+        <meta property="og:image" content="https://www.lavanguardia.com/files/image_449_220/uploads/2018/06/22/5fa4375bcdb95.jpeg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mi-sitio.com/contacto" />
       </Head>

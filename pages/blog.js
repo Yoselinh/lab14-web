@@ -15,7 +15,7 @@ export default function Blog() {
         <meta name="keywords" content="blog, SEO, Next.js, artículos, desarrollo web" />
         <meta property="og:title" content="Blog - Mi Sitio Optimizado" />
         <meta property="og:description" content="Artículos sobre desarrollo web y optimización SEO." />
-        <meta property="og:image" content="/images/seo-image.png" />
+        <meta property="og:image" content="https://www.lavanguardia.com/files/image_449_220/uploads/2018/06/22/5fa4375bcdb95.jpeg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mi-sitio.com/blog" />
       </Head>
@@ -30,6 +30,7 @@ export default function Blog() {
             <p>{post.descripcion}</p>
           </div>
         ))}
+        
 
         <a href="/">← Volver al inicio</a>
       </main>
