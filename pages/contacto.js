@@ -1,7 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-
-
 import { useState } from "react";
 
 export default function Contacto() {
@@ -28,15 +25,6 @@ export default function Contacto() {
       <main style={{ fontFamily: "Arial, sans-serif", maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
         <h1> Contacto</h1>
         <p>Completa el formulario y nos pondremos en contacto contigo.</p>
-
-
-         <Image
-          src="https://www.lavanguardia.com/files/image_449_220/uploads/2018/06/22/5fa4375bcdb95.jpeg"
-          width={800}
-          height={400}
-          alt="Imagen principal del sitio"
-          priority
-        />
 
         {enviado ? (
           <p style={{ color: "green", fontWeight: "bold" }}>¡Mensaje enviado correctamente!</p>
