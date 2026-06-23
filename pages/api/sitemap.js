@@ -1,20 +1,34 @@
 const BASE_URL = "https://mi-proyecto-seo-wzfl.onrender.com";
 
-// Simulación de datos dinámicos (como si vinieran de una base de datos)
-const postsDinamicos = [
-  { slug: "blog/introduccion-a-seo" },
-  { slug: "blog/optimizacion-de-imagenes" },
-  { slug: "blog/lazy-loading-en-nextjs" },
-];
+// Simulación de base de datos (como si fuera MongoDB/CMS)
+const database = {
+  posts: [
+    { slug: "introduccion-a-seo", titulo: "Introducción a SEO" },
+    { slug: "optimizacion-de-imagenes", titulo: "Optimización de imágenes" },
+    { slug: "lazy-loading-en-nextjs", titulo: "Lazy Loading en Next.js" },
+  ],
+  categorias: [
+    { slug: "desarrollo-web" },
+    { slug: "rendimiento" },
+    { slug: "herramientas" },
+  ],
+};
+
+// Función que simula una consulta a base de datos
+async function obtenerRutasDesdeBD() {
+  // En un caso real esto sería: await mongoose.connect(...) y Model.find()
+  const posts = database.posts.map((post) => `/blog/${post.slug}`);
+  const categorias = database.categorias.map((cat) => `/categoria/${cat.slug}`);
+  return [...posts, ...categorias];
+}
 
 export default async function handler(req, res) {
   // Rutas estáticas
   const rutasEstaticas = ["/", "/blog", "/contacto"];
 
-  // Rutas dinámicas generadas desde "base de datos"
-  const rutasDinamicas = postsDinamicos.map((post) => `/${post.slug}`);
+  // Rutas dinámicas desde "base de datos"
+  const rutasDinamicas = await obtenerRutasDesdeBD();
 
-  // Combinamos todas las rutas
   const todasLasRutas = [...rutasEstaticas, ...rutasDinamicas];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
