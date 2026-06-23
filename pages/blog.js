@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+
 
 export default function Blog() {
   const posts = [
@@ -23,6 +25,14 @@ export default function Blog() {
       <main style={{ fontFamily: "Arial, sans-serif", maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
         <h1> Blog</h1>
         <p>Últimos artículos publicados:</p>
+
+         <Image
+          src="https://picsum.photos/800/400"
+          width={800}
+          height={400}
+          alt="Imagen principal del sitio"
+          priority
+        />
 
         {posts.map((post) => (
           <div key={post.id} style={{ border: "1px solid #ddd", borderRadius: "8px", padding: "1rem", marginBottom: "1rem" }}>

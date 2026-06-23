@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -17,6 +19,15 @@ export default function Home() {
       <main style={{ fontFamily: "Arial, sans-serif", maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
         <h1> Bienvenido a Mi Sitio Optimizado</h1>
         <p>Este sitio está construido con Next.js y optimizado para SEO.</p>
+
+         <Image
+          src="https://picsum.photos/800/400"
+          width={800}
+          height={400}
+          alt="Imagen principal del sitio"
+          priority
+        />
+
         <nav style={{ marginTop: "2rem" }}>
           <a href="/blog" style={{ marginRight: "1rem" }}> Blog</a>
           <a href="/contacto">📬 Contacto</a>
