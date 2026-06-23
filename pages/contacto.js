@@ -31,7 +31,7 @@ export default function Contacto() {
 
 
          <Image
-          src="https://picsum.photos/800/400"
+          src="https://www.lavanguardia.com/files/image_449_220/uploads/2018/06/22/5fa4375bcdb95.jpeg"
           width={800}
           height={400}
           alt="Imagen principal del sitio"
